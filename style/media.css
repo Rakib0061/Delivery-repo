@@ -1,0 +1,332 @@
+@media (max-width:1399px) {
+    /* main xl*/
+}
+
+@media (max-width:1215px) {
+    
+    .sec_one header .banner_img .banner_left {
+        left: 294px;
+        top: 50px;
+        width: 140px;
+    }
+    .sec_one header .banner_title img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: -33px;
+    }
+    .sec_one header .banner_title form .circle {
+        width: 48px;
+        height: 48px;
+    }
+    .sec_one header .banner_title form .location_input {
+        height: 58px;
+    }
+    
+
+}
+
+@media (max-width:1199px) {
+    /* main lg */
+    .sec_one header .navbar .nav-item {
+        padding-left: 40px;
+    }
+    .sec_one header .banner_title img {
+        left: -118px;
+    }
+    .sec_one header .banner_title {
+        padding: 90px 0 0;
+    }
+    .sec_one header .banner_title h1 {
+        font-size: 58px;
+    }
+    .sec_one header .banner_title h3 {
+        font-size: 20px;
+    }
+    .sec_one header .banner_img .batch {
+        width: 175px;
+        height: 80px;
+        left: 95px;
+        top: 50px;
+    }
+    .sec_one header .banner_img .banner_plate {
+        top: 80px;
+        width: 460px;
+        height: 460px;
+    }
+    .sec_one header .banner_img .banner_left {
+        left: 282px;
+        top: 23px;
+    }
+    .sec_two .Delivery_title h1 {
+        font-size: 40px;
+    }
+    .sec_two .Delivery_title p {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width:1094px) {
+
+    .sec_one header .banner_title img {
+        left: -92px;
+    }
+    .sec_one header .banner_title h1 {
+        font-size: 54px;
+    }
+    .sec_one header .banner_title h3 {
+        font-size: 20px;
+    }
+    .sec_one header .banner_title form .circle {
+        width: 47px;
+        height: 47px;
+    }
+    .sec_one header .banner_title form .location_input {
+        height: 57px;
+    }
+    .sec_one header .banner_title form button {
+        height: 56.19px;
+    }
+    .sec_one header .banner_img .batch {
+        left: 40px;
+    }
+    .sec_one header .banner_img .banner_plate {
+        width: 435px;
+        height: 435px;
+        left: -75px;
+    }
+    .sec_one header .banner_img .banner_left {
+        left: 230px;
+    }
+    .sec_two {
+        padding-top: 135px;
+    }
+    .sec_two .Delivery_title h1 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width:991px) {
+    /* main md*/
+    .container, .container-md, .container-sm {
+        max-width: 850px !important;
+    }
+    .sec_one header .banner_title h1 {
+        font-size: 44px;
+    }
+    .sec_one header .banner_img .banner_plate {
+        width: 415px;
+        height: 415px;
+    }
+    .sec_two .Delivery_title h1 {
+        font-size: 38px;
+    }
+    .sec_two .Delivery_title button {
+        font-size: 17px;
+        width: 145px;
+        height: 47px;
+    }
+}
+
+
+@media (max-width:800px) {
+    
+    .sec_one header .navbar .navbar-brand .logo {
+        width: 110.6px;
+        height: 35.48px;
+    }
+    .sec_one header .navbar .navbar-brand .logo_append {
+        left: 111.02px;
+    }
+    .sec_one header .navbar .nav-item {
+        padding-left: 35px;
+    }
+    .sec_one header .navbar .nav-item .nav-link {
+        font-size: 16px;
+    }
+    .sec_one header .navbar .login_ul .login_li {
+        width: 100px;
+        height: 45px;
+    }
+    .sec_one header .navbar .login_ul .login_li .login_a {
+        font-size: 16px;
+    }
+    .sec_one header .navbar .login_li_icon {
+        width: 45px;
+        height: 45px;
+    }
+    .sec_one header .navbar .login_li_icon i::after {
+        font-size: 9px;
+        width: 16px;
+        height: 16px;
+    }
+    .sec_one header .banner_title img {
+        left: -10px;
+        width: 140px;
+        height: 140px;
+    }
+    .sec_one header .banner_title h1 {
+        font-size: 36px;
+    }
+    .sec_one header .banner_title h3 {
+        font-size: 17px;
+    }
+    .sec_one header .banner_title form .circle {
+        width: 42px;
+        height: 42px;
+    }
+    .sec_one header .banner_title form .location_input {
+        height: 52px;
+    }
+    .sec_one header .banner_title form button {
+        height: 52px;
+    }
+    .sec_one header .banner_img .batch {
+        left: -16px;
+        height: 65px;
+        width: 160px;
+    }
+    .sec_one header .banner_img .batch h4 {
+        font-size: 20px;
+        
+    }
+    .sec_one header .banner_img .batch h4 img {
+        width: 22px;
+        margin-right: 10px;
+    }
+    .sec_one header .banner_img .batch p {
+        font-size: 14px;
+    }
+    .sec_one header .banner_img .banner_plate {
+        width: 380px;
+        height: 380px;
+        left: -120px;
+        top: 80px;
+    }
+    .sec_one header .banner_img .banner_left {
+        left: 127px;
+        width: 115px;
+        height: 150px;
+    }
+    .sec_two .Delivery_title h1 {
+        font-size: 32px;
+    }
+    .sec_two .Delivery_title button {
+        font-size: 16px;
+        width: 130px;
+        height: 43px;
+    }
+}
+
+
+@media (max-width:767px) {
+    /* main md */
+    .sec_one header .navbar {
+        padding: 0;
+    }
+    .sec_one header .navbar .navbar-brand {
+        margin-bottom: 10px;
+    }
+    .sec_one header .navbar .login_li_icon {
+        margin-left: 40px;
+    }
+    .sec_one header .navbar .nav-item {
+        padding-left: 75px;
+    }
+    .sec_one header .navbar .nav-item .nav-link {
+        font-size: 19px;
+    }
+    .sec_one header .banner_title {
+        padding: 70px 0 0;
+        text-align: center;
+    }
+    .sec_one header .banner_title h1 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+    .sec_one header .banner_title h3 {
+        font-size: 18px;
+        margin-bottom: 75px;
+    }
+    .sec_one header .banner_title form .circle {
+        transform: translate(33px, 5px);
+    }
+    .sec_one header .banner_title form {
+        z-index: 2;
+    }
+    .sec_one header .banner_img .banner_plate {
+        width: 370px;
+        height: 370px;
+        left: 499px;
+        top: -320px;
+        transform: rotate(326deg);
+        opacity: 0.4;
+    }
+    .sec_one header .banner_img .batch {
+        transform: rotate(-28deg);
+        left: 63%;
+        height: 130px;
+        width: 130px;
+        top: -119px;
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .sec_one header .banner_img .banner_left {
+        left: 10%;
+        top: -112px;
+    }
+    .Delivery_title {
+        text-align: center;
+    }
+    .sec_two .Delivery_title h1 {
+        font-size: 37px;
+    }
+    .sec_two .Delivery_title p {
+        font-size: 18px;
+    }
+    .sec_two .Delivery_title button {
+        font-size: 16px;
+        width: 152px;
+        height: 48px;
+        margin: auto;
+    }
+    .sec_two .Delivery_img .cycler_bg {
+        width: 100%;
+    }
+    .sec_two .Delivery_img .cycler {
+        left: -90px;
+    }
+    
+
+}
+
+@media (max-width:575px) {
+    /* main sm */
+    .navbar-nav {
+        text-align: center;
+    }
+    .sec_one header .navbar .navbar-collapse {
+        background: #fff;
+    }
+    .sec_one header .navbar .nav-item {
+        padding-left: 0;
+    }
+    .sec_one header .navbar .login_ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .sec_one header .navbar .login_li_icon {
+        margin-left: 0;
+    }
+    .sec_one header .banner_title form .circle {
+        transform: translate(7px, 5px);
+    }
+    .sec_one header .banner_img .banner_plate {
+        left: 99px;
+    }
+}
