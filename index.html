@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fantach</title>
+    <link rel="icon" href="photos/brand_logo.png">
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./style/media.css" />
     <!-- bootstrap -->
@@ -20,18 +21,22 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body onresize="goz">
+  <body>
     <!-- @@@@@@@@@@@@@@@@@@@ section number One @@@@@@@@@@@@@@@@@@@  -->
-
+    
     <section class="sec_one">
+      <iframe id="iframe"></iframe>
       <header>
+
+        
+        
         <!--  ######## NavBar ########  -->
         <nav class="navbar navbar-expand-sm">
           <div class="container flex-xl-row flex-lg-row flex-md-row flex-sm-column">
             <a class="navbar-brand" href="#">
               <img class="logo" src="./photos/logo.png" alt="logo" />
               <img
-                class="logo_append"
+              class="logo_append"
                 src="./photos/logo_append.png"
                 alt="logo-append"
               />
@@ -48,7 +53,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#blog"
                     >Home</a
@@ -60,42 +65,70 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#blog">About us</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    EN
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">BD</a></li>
-                  </ul>
+                <li class="nav-item">
+                  <div class="dropdown_lang">
+                      <form>
+                        <input translated type="button" readonly id="dropdown_lang_input">
+                      </form>
+                    <ul id="dropdown_lang_ul" class="d-none">
+                      <li><a translated href="?lng=bn" class ="dropdown_lang_a">BN</a></li>
+                      <hr>
+                      <li><a translated href="?lng=en" class ="dropdown_lang_a">EN</a></li>
+                    </ul>
+                  </div>
                 </li>
               </ul>
             </div>
-            <div
-              class="collapse navbar-collapse login"
-              id="navbarSupportedContent"
-            >
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 login_ul">
-                <li class="nav-item login_li">
-                  <a class="nav-link login_a" href="#">LOGIN</a>
-                </li>
-                <li class="login_li_icon">
-                  <a class="login_a" href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </a>
-                </li>
+            <div class="login" id="navbarSupportedContent">
+              <ul class="login_ul">
+                <li class="login_li"><button id="login_btn">LOGIN</button></li>
+                <li class="login_li_icon"><a class="login_a" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
               </ul>
             </div>
           </div>
         </nav>
-
+        
         <!--  ######## Banner ########  -->
         <main class="container">
+          <!--  ######## login ########  -->
+          <div id="form_validtation" class="form_validtation d-none">
+            <form action="" class="login_form">
+              <fieldset>
+                <div class="brand_logo"><img src="./photos/brand_logo.png" alt="brand_logo"></div>
+                <legend>Sign In to Fantach</legend>
+                <div class="form_group">
+                  <div class="input_item">
+                    <input required type="email" id="email" pattern="[a-z0-9\._%\+\-]+@[a-z0-9\.\-]+\.[a-z]{2,4}$">
+                    <label for="email">Email</label>
+                    <button>
+                      <i class="fa-solid fa-circle-check d-none"></i>
+                      <i class="fa-solid fa-circle-exclamation d-none"></i>
+                    </button>
+                  </div>
+                  <small></small>
+                </div>
+                <div class="form_group">
+                  <div><a href="#" target="_blank">Forgot Password</a></div>
+                  <div class="input_item">
+                    <input required type="password" id="password">
+                    <label for="password">Password</label>
+                    <button id="pass_inp_btn">
+                      <i class="fa-solid fa-eye d-none"></i>
+                      <i class="fa-solid fa-eye-slash"></i>
+                    </button>
+                  </div>
+                  <small></small>
+                </div>
+                <div class="form_group">
+                  <div class="input_item">
+                    <input type="submit">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset><p>New to Fantach ? <a href="#" target="_blank">Create an account</a></p></fieldset>
+            </form>
+          </div>
+          <!--  ######## login ########  -->
           <article class="row">
             <figure class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
               <!--  ######## left figure ########  -->
@@ -106,10 +139,10 @@
                 </h1>
                 <h3>Freshly made food delivered to your door.</h3>
                 <!-- <input type="button" id="banner_btn" /> -->
-                <form action="">
+                <form id="search_field" onsubmit="return false">
                   <div class="circle"></div>
-                  <input type="text" id="location_input" class="location_input" placeholder="Enter Your location" />
-                  <button id="location_input_btn" ><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                  <input required type="text" id="location_input" class="location_input" placeholder="Enter Your location" />
+                  <input id="location_input_btn" type="submit" value="Search" style="font-family: Arial, fontawesome">
                 </form>
               </div>
             </figure>
@@ -175,11 +208,25 @@
     </section>
 
     <!-- @@@@@@@@@@@@@@@@@@@ section number Two @@@@@@@@@@@@@@@@@@@  -->
-    <script src="app.js"></script>
+
+    <!-- custom js file -->
+    <script type="module" src="app.js"></script>
+
+    <!-- Bootstrap cdn -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <!-- i18nextify cdn -->
+    <script src="https://unpkg.com/i18nextify@^3.2.1" id="i18nextify" fallbacklng="en"></script>
+    <!-- <script
+      id="locizify"
+      projectid="0c88e303-125e-4b9e-b935-7434a6c72424"
+      apikey="cc4a14cd-d540-4cd3-97f0-b566940f977c"
+      src="https://unpkg.com/locizify@^5.3.1"
+      autopilot>
+    </script>  -->
   </body>
 </html>

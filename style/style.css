@@ -7,8 +7,173 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+.form_validtation {
+  position: absolute;
+  width: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(57, 108, 3, 0.2901960784);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  border-radius: 8.86914px;
+  z-index: 3;
+  padding: 36px 50px;
+}
+.form_validtation .brand_logo {
+  text-align: center;
+}
+.form_validtation .brand_logo img {
+  width: 18%;
+}
+.form_validtation form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form_validtation form fieldset {
+  width: 100%;
+}
+.form_validtation form fieldset legend {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 25px;
+}
+.form_validtation form fieldset .form_group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  position: relative;
+}
+.form_validtation form fieldset .form_group .input_item {
+  position: relative;
+}
+.form_validtation form fieldset .form_group .input_item input {
+  width: 100%;
+  border: 2px solid rgba(63, 63, 63, 0.5882352941);
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  background: transparent;
+  border-radius: 10px;
+  outline: none;
+  padding: 7px 0 4px 15px;
+  transition: transform 0.4s cubic-bezier(0.47, 1.64, 0.32, 0.71);
+}
+.form_validtation form fieldset .form_group .input_item input[type=submit] {
+  background-color: #396c03;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0;
+  border: none;
+  padding: 4px 0;
+  font-size: 20px;
+}
+.form_validtation form fieldset .form_group .input_item input:focus ~ label, .form_validtation form fieldset .form_group .input_item input:valid ~ label {
+  font-size: 1em;
+  transform: translateY(-33px);
+  background-color: #396c03;
+  color: #fff;
+  border-radius: 4px;
+  padding: 0 10px;
+  left: 15px;
+}
+.form_validtation form fieldset .form_group .input_item input:focus-visible {
+  outline: none !important;
+}
+.form_validtation form fieldset .form_group .input_item label {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  padding: 0 15px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s linear;
+}
+.form_validtation form fieldset .form_group .input_item button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 0 7px 0 0;
+  top: 0;
+  right: 0;
+}
+.form_validtation form fieldset .form_group .input_item button .fa-circle-check {
+  color: #396c03;
+}
+.form_validtation form fieldset .form_group .input_item button .fa-circle-exclamation {
+  color: #ff8b00;
+  text-shadow: 1px 1px 1px #000;
+}
+.form_validtation form fieldset .form_group .input_item button .fa-eye {
+  width: 20px;
+  color: #396c03;
+}
+.form_validtation form fieldset .form_group .input_item button .fa-eye-slash {
+  color: #396c03;
+}
+.form_validtation form fieldset .form_group small {
+  color: #ff8b00;
+  font-size: 13px;
+  font-weight: 500;
+  text-shadow: 1px 1px black;
+  filter: contrast(1.4);
+  letter-spacing: 0.4px;
+}
+.form_validtation form fieldset .form_group div {
+  text-align: end;
+}
+.form_validtation form fieldset .form_group div a {
+  text-decoration: none;
+  color: #0069ff;
+  font-size: 13px;
+  font-weight: 500;
+}
+.form_validtation form fieldset .form_group div a:hover {
+  color: #0069ff;
+  text-decoration: underline;
+}
+.form_validtation form fieldset p {
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+}
+.form_validtation form fieldset p a {
+  color: #0069ff;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+  font-weight: 500;
+}
+.form_validtation form fieldset p a:hover {
+  color: #0069ff;
+  text-decoration: underline;
+}
+
 .sec_one {
+  position: relative;
   background-color: #f0f4ec;
+}
+.sec_one iframe {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 40%;
+  height: 40%;
+  right: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+  border-radius: 12px;
 }
 .sec_one header {
   overflow: hidden;
@@ -16,7 +181,6 @@ body {
 .sec_one header .navbar {
   position: relative;
   z-index: 10;
-  transition: all 0.1s cubic-bezier(0.29, -0.16, 0.87, 0.65);
 }
 .sec_one header .navbar .navbar-toggler {
   transition: none;
@@ -42,19 +206,118 @@ body {
 .sec_one header .navbar .nav-item {
   padding-left: 70px;
 }
-.sec_one header .navbar .nav-item .dropdown-menu.show {
+.sec_one header .navbar .nav-item .dropdown_lang {
+  position: relative;
   display: flex;
-  justify-content: end;
   align-items: center;
-  background: transparent;
+  justify-content: center;
+  height: 100%;
+}
+.sec_one header .navbar .nav-item .dropdown_lang form input {
+  width: 2.2rem;
   border: none;
-  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3f3f3f;
+}
+.sec_one header .navbar .nav-item .dropdown_lang form input:focus-visible {
+  border: none;
+  outline: none;
+}
+.sec_one header .navbar .nav-item .dropdown_lang form::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-color: #ff8b00;
+  width: 100%;
+  height: 0px;
+  transition: all 0.2s linear;
+  border-radius: 20px;
+}
+.sec_one header .navbar .nav-item .dropdown_lang form:hover::before {
+  height: 2.3px;
+}
+.sec_one header .navbar .nav-item .dropdown_lang ul {
+  position: absolute;
   padding: 0;
+  top: 110%;
+  left: 55%;
+}
+.sec_one header .navbar .nav-item .dropdown_lang ul li {
+  list-style: none;
+  padding: 5px 0;
+  background-color: #396c03;
+  transition: all 0.2s linear;
+}
+.sec_one header .navbar .nav-item .dropdown_lang ul li:hover {
+  background-color: #ff8b00;
+}
+.sec_one header .navbar .nav-item .dropdown_lang ul li a {
+  text-decoration: none;
+  padding: 4px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.sec_one header .navbar .nav-item .dropdown_lang ul hr {
+  margin: 0;
+  color: #000;
+}
+.sec_one header .navbar .nav-item .lang {
+  position: relative;
+  height: 100%;
+}
+.sec_one header .navbar .nav-item .lang select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+}
+.sec_one header .navbar .nav-item .lang select:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.sec_one header .navbar .nav-item .lang select:focus > option:checked {
+  background: #396C03 !important;
+}
+.sec_one header .navbar .nav-item .lang::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-color: #ff8b00;
+  width: 100%;
+  height: 0px;
+  transition: all 0.2s linear;
+  border-radius: 20px;
+}
+.sec_one header .navbar .nav-item .lang:hover::before {
+  height: 2.3px;
 }
 .sec_one header .navbar .nav-item .nav-link {
   font-size: 18px;
   font-weight: 500;
   color: #3f3f3f;
+  position: relative;
+}
+.sec_one header .navbar .nav-item .nav-link::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-color: #ff8b00;
+  width: 100%;
+  height: 0px;
+  transition: all 0.2s linear;
+  border-radius: 20px;
+}
+.sec_one header .navbar .nav-item .nav-link:hover::before {
+  height: 2.3px;
 }
 .sec_one header .navbar .login_ul {
   padding: 0 !important;
@@ -62,8 +325,18 @@ body {
   padding: 0 !important;
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 .sec_one header .navbar .login_ul .login_li {
+  list-style: none;
+}
+.sec_one header .navbar .login_ul .login_li button {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
   background: #396c03;
   border-radius: 225px;
   width: 140px;
@@ -74,11 +347,6 @@ body {
   align-items: center;
   padding: 12px 50px;
   gap: 5px;
-}
-.sec_one header .navbar .login_ul .login_li .login_a {
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
 }
 .sec_one header .navbar .login_li_icon {
   width: 52px;
@@ -111,7 +379,6 @@ body {
 .sec_one header .sticky {
   position: fixed;
   width: 100%;
-  border-bottom: 1px solid #676767;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   box-shadow: 0 0 8px 1px rgba(175, 171, 171, 0.7803921569);
@@ -150,39 +417,36 @@ body {
 .sec_one header .banner_title form {
   position: relative;
   margin-bottom: 130px;
+  width: 85%;
 }
 .sec_one header .banner_title form .circle {
   position: absolute;
+  cursor: pointer;
   width: 50px;
   height: 50px;
-  transform: translate(5px, 5px);
+  transform: translate(5px, 4.5px);
   left: 0;
   top: 0;
   background: #ff8b00;
   border-radius: 100%;
 }
 .sec_one header .banner_title form .location_input {
-  width: 170px;
-  height: 60px;
+  display: none;
+  outline: none;
+  width: 100%;
   border: 2px solid #396c03;
   border-radius: 120px;
   background: transparent;
   color: #676767;
   font-size: 22px;
   font-weight: 500;
-  padding-left: 60px;
+  padding: 10px 0 12px 60px;
   transition: width 0.4s cubic-bezier(0.47, 1.64, 0.32, 0.71);
 }
-.sec_one header .banner_title form button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 50px;
-  gap: 8px;
-  width: 168.56px;
-  height: 58.19px;
-  transform: translateX(1%);
+.sec_one header .banner_title form #location_input_btn {
+  position: absolute;
+  cursor: pointer;
+  padding: 16px 40px;
   left: 0;
   border: navajowhite;
   color: #fff;
@@ -191,8 +455,11 @@ body {
   top: 0;
   background: #396C03;
   border-radius: 100px;
-  position: absolute;
+  outline: none;
   transition: transform 0.4s cubic-bezier(0.47, 1.64, 0.32, 0.71);
+}
+.sec_one header .banner_title form #location_input_btn:focus-visible {
+  outline: none !important;
 }
 .sec_one header .banner_img {
   position: relative;
